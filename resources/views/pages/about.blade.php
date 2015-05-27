@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('master')
+
+@section ('content')
+
 	<h1>About me! {{$name}}</h1>
 
 	<p>
@@ -15,5 +13,15 @@
 		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</p>
 
-</body>
-</html>
+	@if (count($people))
+	<h3>My team:</h3>
+	<ul>
+
+		@foreach ($people as $person)
+			<li>{{ $person }}</li>
+		@endforeach
+
+	</ul>
+	@endif
+
+@stop

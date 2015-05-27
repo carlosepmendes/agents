@@ -11,8 +11,20 @@ class PagesController extends Controller {
 	public function about()
 	{
 
-		$name = 'Nuno Way';
+		$people = [
+			'Bruno', 'Duarte', 'Samuel', 'Pedro', 'Carlos'
+		];
 
-		return view('pages.about')->with('name', $name);
+		$name = 'Nuno';
+
+		return view('pages.about', compact('people', 'name'));
 	}
+
+	public function contact()
+	{
+		return view('pages.contact');
+	}
+
 }
+
+//array('people' => $people, 'name' => $name)

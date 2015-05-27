@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends ('master')
+
+@section ('content')
+
 	<h1>Contact me!</h1>
-</body>
-</html>
+
+@stop
+
+
+@section ('footer')
+
+	<script type="text/javascript">alert('form scripts go here!');</script>
+
+@stop
